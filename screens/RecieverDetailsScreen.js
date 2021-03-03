@@ -37,11 +37,12 @@ export default class RecieverDetailsScreen extends Component{
     });
 
     db.collection('requested_books').where('request_id','==',this.state.requestId).get()
-    .then(snapshot=>{
-      snapshot.forEach(doc => {
-        this.setState({recieverRequestDocId:doc.id})
-     })
-  })}
+      .then(snapshot=>{
+        snapshot.forEach(doc => {
+          this.setState({recieverRequestDocId:doc.id})
+      })
+    })
+}
 
 
   getUserDetails=(userId)=>{

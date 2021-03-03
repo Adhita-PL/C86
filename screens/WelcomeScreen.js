@@ -40,7 +40,8 @@ export default class WelcomeScreen extends Component{
          last_name:this.state.lastName,
          contact:this.state.contact,
          email_id:this.state.emailId,
-         address:this.state.address
+         address:this.state.address,
+         isBookRequestActive : false
        })
        return  Alert.alert(
             'User Added Successfully',
@@ -287,7 +288,7 @@ const styles = StyleSheet.create({
    alignSelf:'center',
    borderColor:'#ffab91',
    borderRadius:10,
-   borderWidth:1,
+   borderWidth:1, 
    marginTop:20,
    padding:10
  },
